@@ -6,7 +6,7 @@ node('linux'){
         sh "ant"
     }
     
-    stage('Test'){
+    stage('Unit Tests'){
         sh "ant -buildfile test.xml"
     }
     
