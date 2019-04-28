@@ -11,7 +11,7 @@ node('linux'){
     }
      stage('Build'){
         git 'https://github.com/nyaundid/java-project.git'
-        sh "ant"
+        sh "ant -buildfile build.xml"
     }
     
     stage('Reports'){
