@@ -14,9 +14,9 @@ node('linux'){
         sh "ant -buildfile build.xml"
     }
     
-             stage('Deploy'){
+      stage('Deploy'){
         
-        aws s3 cp /tmp/foo/ s3://jekins/$(JOB_NAME)/$(BUILD_NUMBER)/
+        aws s3 cp target/java-project s3://jekins/$(JOB_NAME)/$(BUILD_NUMBER)/
     }
 
     
