@@ -16,7 +16,8 @@ node('linux'){
     
         }
      stage('Deploy'){
-        aws s3 cp target/rectangle-2.jar s3://cf-templates-1a0wg6b0hcdqw-us-east-2 /$(JOB_NAME)/$(BUILD_NUMBER)/
+        
+        aws s3 cp /tmp/foo/ s3://cf-templates-1a0wg6b0hcdqw-us-east-2/ --recursive --exclude "*" --include "*.jar"
     }
     
     stage('Reports'){
