@@ -16,8 +16,7 @@ node('linux'){
     
              stage('Deploy'){
         
-        
-        sh("aws s3 cp /tmp/foo/ s3://jekins/${env.BRANCH_NAME}/ --recursive --exclude '*' --include '*.jar'")
+        aws s3 cp /tmp/foo/ s3://jekins/$(JOB_NAME)/$(BUILD_NUMBER)/
     }
 
     
