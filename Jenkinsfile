@@ -29,4 +29,4 @@ withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariab
        sh 'aws cloudformation describe-stack-resources --stack-name jenkins --region us-east-1' 
     }
   }
-}
+
