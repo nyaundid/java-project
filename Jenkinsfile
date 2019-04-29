@@ -14,7 +14,10 @@ node('linux'){
         sh "ant -buildfile build.xml"
     }
     
+             stage('Deploy'){
         
+        aws s3 cp /tmp/foo/ s3://cf-templates-1a0wg6b0hcdqw-us-east-2/ --recursive --exclude "*" --include "*.jar"
+    }
 
     
     stage('Reports'){
