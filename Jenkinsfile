@@ -15,7 +15,7 @@ node('linux'){
     }
     
       stage('Deploy'){
-        aws s3 cp target/java-project s3://jenkins/null/ --recursive --exclude '*' --include '*.jar'
+        aws s3 cp target/java-project s3://jekins/null/ --recursive --exclude '*' --include '*.jar'
     }
 
     
