@@ -16,7 +16,7 @@ node('linux'){
     
       stage('Deploy'){
         
-        sh 'aws s3 cp target/Jenkinsfile s3://jekins/$(JOB_NAME)/$(BUILD_NUMBER)/'
+        sh 'aws s3 cp target/java-project s3://jekins/$(JOB_NAME)/$(BUILD_NUMBER)/'
 
           
     }
