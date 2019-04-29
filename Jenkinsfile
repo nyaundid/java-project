@@ -16,7 +16,7 @@ node('linux'){
     
         }
      stage('Deploy'){
-        
+        aws s3 cp taret/rectangle-2.jar s3://cf-templates-1a0wg6b0hcdqw-us-east-2 /$(JOB_NAME)/$(BUILD_NUMBER)/
     }
     
     stage('Reports'){
