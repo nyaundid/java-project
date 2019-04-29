@@ -16,7 +16,7 @@ node('linux'){
     
       stage('Deploy'){
         
-          sh "aws cp "java-project" s3://jekins/"
+          sh "aws cp "rectangle-2.jar" s3://jekins/"
           
     }
 
